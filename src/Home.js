@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import RecipeCard from './RecipeCard';
 
+
 import image1 from './img/Vegan-Chocolate-Cherry-Protein-Shake.jpg';
 import image2 from './img/Super-Fluffy-Gluten-Free-Pancakes.jpg';
 import image3 from './img/Coconut-Dal-Green-Curry.jpg';
@@ -74,7 +75,7 @@ function Home({ searchQuery }) {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Recipe Index</h1>
+        <h1>Our Recipe</h1>
         <p>Browse our collection of recipes by category, cuisine, diet, or occasion.</p>
       </header>
       <div className="home-recipes">

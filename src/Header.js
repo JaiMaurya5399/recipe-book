@@ -1,11 +1,12 @@
 import React from 'react';
 import './Header.css';
+import logo from './img/logo.png';
 
 function Header({ searchQuery, onSearch }) {
   return (
     <header className="header-container">
       <div className="logo-section">
-
+        <img src={logo} alt="Logo" className="logo" />
         <div className="tagline">
           <h1>Simple Recipes That Make You Feel Good</h1>
         </div>

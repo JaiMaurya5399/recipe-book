@@ -1,13 +1,11 @@
 import React from 'react';
-import './RecipeCard.css';
+import './RecipeCard.css'; // Add a separate CSS file if needed for RecipeCard
 
-function RecipeCard({ image, title }) { // Remove `tags` from the props
+function RecipeCard({ image, title }) {
   return (
     <div className="recipe-card">
-      <img src={image} alt={title} className="recipe-image" />
-      <h3 className="recipe-title">{title}</h3>
-      {/* Remove or comment out the following section to exclude the tags */}
-      {}
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
     </div>
   );
 }
