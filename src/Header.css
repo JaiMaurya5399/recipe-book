@@ -1,0 +1,74 @@
+/* Header.css */
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .tagline h1 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: normal;
+  }
+  
+  .search-section {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-title {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    font-size: 1em;
+    outline: none;
+  }
+  
+  .search-bar .search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .search-bar .search-button i {
+    font-family: FontAwesome;
+  }
+  

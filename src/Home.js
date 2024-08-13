@@ -15,58 +15,61 @@ import image10 from './img/Mint-Chutney-Fresh-Indian-inspired.jpg';
 import image11 from './img/Sweet-Potato-Fritters-Gluten-free.jpg';
 import image12 from './img/Pot-Vegan-Chickpea-Curry.jpg';
 
-function Home() {
+function Home({ searchQuery }) { 
   const recipes = [
     {
-      image: image1,  // Use the imported image variable here
+      image: image1,
       title: 'Chocolate Cherry Protein Shake',
     },
     {
-      image: image2,  // Use the imported image variable here
+      image: image2,
       title: 'Chocolate Peanut Butter Ice Cream Bars (Vegan)',
     },
     {
-        image: image3,  // Use the imported image variable here
-        title: 'Coconut-Dal-Green-Curry',
-      },
-      {
-        image: image4,  // Use the imported image variable here
-        title: 'Palak-Paneer-with-Tofu',
-      },
-      {
-        image: image5,  // Use the imported image variable here
-        title: 'Hot-Chocolate-with-Chai-Spices',
-      },
-      {
-        image: image6,  // Use the imported image variable here
-        title: 'Vegan-Tofu-Cauliflower-Curry-Korma',
-      },
-      {
-        image: image7,  // Use the imported image variable here
-        title: 'Shawarma-Roasted-Cabbage-Wedges',
-      },
-      {
-        image: image8,  // Use the imported image variable here
-        title: 'Tikka-Masala-BIG-flavor-vegan',
-      },
-      {
-        image: image9,  // Use the imported image variable here
-        title: 'Indian-Style-Jeera-Rice',
-      },
-      {
-          image: image10,  // Use the imported image variable here
-          title: 'Mint-Chutney-Fresh-Indian',
-        },
-        {
-          image: image11,  // Use the imported image variable here
-          title: 'Sweet-Potato-Fritters-Gluten-free',
-        },
-        {
-          image: image12,  // Use the imported image variable here
-          title: 'Pot-Vegan-Chickpea-Curry',
-        },
-        
+      image: image3,
+      title: 'Coconut-Dal-Green-Curry',
+    },
+    {
+      image: image4,
+      title: 'Palak-Paneer-with-Tofu',
+    },
+    {
+      image: image5,
+      title: 'Hot-Chocolate-with-Chai-Spices',
+    },
+    {
+      image: image6,
+      title: 'Vegan-Tofu-Cauliflower-Curry-Korma',
+    },
+    {
+      image: image7,
+      title: 'Shawarma-Roasted-Cabbage-Wedges',
+    },
+    {
+      image: image8,
+      title: 'Tikka-Masala-BIG-flavor-vegan',
+    },
+    {
+      image: image9,
+      title: 'Indian-Style-Jeera-Rice',
+    },
+    {
+      image: image10,
+      title: 'Mint-Chutney-Fresh-Indian',
+    },
+    {
+      image: image11,
+      title: 'Sweet-Potato-Fritters-Gluten-free',
+    },
+    {
+      image: image12,
+      title: 'Pot-Vegan-Chickpea-Curry',
+    },
   ];
+
+  const filteredRecipes = recipes.filter((recipe) =>
+    recipe.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="home-container">
@@ -75,7 +78,7 @@ function Home() {
         <p>Browse our collection of recipes by category, cuisine, diet, or occasion.</p>
       </header>
       <div className="home-recipes">
-        {recipes.map((recipe, index) => (
+        {filteredRecipes.map((recipe, index) => ( // Use filteredRecipes here
           <RecipeCard
             key={index}
             image={recipe.image}
