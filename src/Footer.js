@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import logo from './img/logo.png';
+import { Link } from 'react-router-dom'; // Import the Link component from react-router-dom
 
 function Footer() {
   return (
@@ -22,15 +23,14 @@ function Footer() {
       <hr />
       <div className="footer-bottom">
         <nav className="footer-nav">
-          <a href="#">Recipes</a>
-          <a href="#">Cookbook</a>
-          <a href="#">Shop</a>
-          <a href="#">About</a>
+          <Link to="/">Recipes</Link>
+      
+          <Link to="/about">About</Link>
         </nav>
         <div className="footer-legal">
-          <a href="#">RECIPEREALMN.COM</a>
-          <a href="#">PRIVACY POLICY</a>
-          <a href="#">TERMS</a>
+          <Link to="#">RECIPEREALMN.COM</Link>
+          <Link to="/privacy-policy">PRIVACY POLICY</Link>
+          <Link to="/terms">TERMS</Link>
         </div>
       </div>
     </footer>
