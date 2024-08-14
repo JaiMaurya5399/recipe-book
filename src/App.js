@@ -22,7 +22,7 @@ function App() {
       'Vegan Chocolate Cherry Protein Shake': {
         image: recipe.image,
         title: 'Vegan Chocolate Cherry Protein Shake',
-        description: 'A healthy and delicious vegan shake...',
+        description: 'A healthy and delicious vegan shake',
         author: 'Minimalist Baker',
         prepTime: '5 minutes',
         totalTime: '5 minutes',

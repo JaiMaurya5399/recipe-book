@@ -52,15 +52,16 @@
 }
 
 .recipe-details-table caption {
-  font-size: 1.4em;
+  font-size: 1.8em;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .recipe-details h2,
 .recipe-details h3 {
-  color: #333;
+  color:cadetblue;
   margin-top: 20px;
+  font-size: 2em;
 }
 
 .recipe-details ul,
@@ -76,7 +77,24 @@
 }
 
 .recipe-details p {
-  font-size: 1.1em;
-  color: #555;
+  font-size: 1.8em;
+  color: cadetblue;
   margin-top: 10px;
+  
+}
+.back-button {
+
+  font-size: 1rem; 
+  padding: 0.75rem 1rem; 
+  background-color: cadetblue; 
+  color: white; 
+  border: none; 
+  border-radius: 0.5rem; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.back-button:hover {
+  background-color:grey; 
+  transform: scale(1.05); 
+  color: #ffffff; 
 }
