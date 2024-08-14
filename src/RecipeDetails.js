@@ -1,21 +1,37 @@
 // RecipeDetails.js
 import React from 'react';
-import './RecipeDetails.css'; // Import the new CSS
+import { useNavigate } from 'react-router-dom';
+import './RecipeDetails.css'; // Make sure to create and link this CSS file
 
 function RecipeDetails({ recipe, onBack }) {
-  if (!recipe) return null;
+  const navigate = useNavigate();
+
+  if (!recipe) {
+    return <div className="recipe-details">No recipe selected.</div>;
+  }
+
+  const handleBack = () => {
+    onBack();
+    navigate('/');
+  };
 
   return (
     <div className="recipe-details">
-      
       <div className="recipe-details-content">
-      
-        <div className='image'>
+        <div className="image">
+            
         <h2>{recipe.title}</h2>
-        <img className='main-image' src={recipe.image} alt={recipe.title} /><p>{recipe.description}</p></div>
-        
-        <table className="recipe-details-table">
-          <caption>Recipe Details</caption>
+          <img
+            src={recipe.image}
+            alt={recipe.title}
+            className="main-image"
+          />
+           <p>{recipe.description}</p>
+ 
+        </div>
+
+           <table className="recipe-details-table">
+          <caption>Recipe Information</caption>
           <tbody>
             <tr>
               <th>Author</th>
@@ -46,25 +62,30 @@ function RecipeDetails({ recipe, onBack }) {
               <td>{recipe.freezerFriendly}</td>
             </tr>
             <tr>
-              <th>Does it Keep?</th>
+              <th>Does It Keep?</th>
               <td>{recipe.doesItKeep}</td>
             </tr>
           </tbody>
         </table>
+
         <h3>Ingredients</h3>
         <ul>
           {recipe.ingredients.map((ingredient, index) => (
             <li key={index}>{ingredient}</li>
           ))}
         </ul>
+
         <h3>Instructions</h3>
         <ol>
           {recipe.instructions.map((instruction, index) => (
             <li key={index}>{instruction}</li>
           ))}
         </ol>
-        <p><strong>Notes:</strong> {recipe.notes}</p>
-        <h3>Nutrition</h3>
+
+        <h3>Notes</h3>
+        <p>{recipe.notes}</p>
+
+        <h3>Nutritional Information</h3>
         <table className="recipe-details-table">
           <tbody>
             <tr>
@@ -85,12 +106,15 @@ function RecipeDetails({ recipe, onBack }) {
             </tr>
           </tbody>
         </table>
+
         <h3>Why You'll Love It</h3>
         <ul>
           {recipe.whyLove.map((reason, index) => (
             <li key={index}>{reason}</li>
           ))}
         </ul>
+
+        <button onClick={handleBack} className="back-button">Back to Recipes</button>
       </div>
     </div>
   );

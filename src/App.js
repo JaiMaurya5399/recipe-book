@@ -6,7 +6,8 @@ import Home from './Home';
 import About from './About'; // Import the About component
 import PrivacyPolicy from './PrivacyPolicy'; // Import the Privacy Policy component
 import Terms from './Terms'; // Import the Terms component
-import Footer from './Footer'; // Import the Footer component
+import Footer from './Footer';
+import RecipeDetails from './RecipeDetails';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,7 +22,7 @@ function App() {
       'Vegan Chocolate Cherry Protein Shake': {
         image: recipe.image,
         title: 'Vegan Chocolate Cherry Protein Shake',
-        description: 'A healthy and delicious vegan shake',
+        description: 'A healthy and delicious vegan shake...',
         author: 'Minimalist Baker',
         prepTime: '5 minutes',
         totalTime: '5 minutes',
@@ -219,7 +220,6 @@ function App() {
       },
       'Vegan Tofu Cauliflower Curry Korma': {
         image: recipe.image,
-       
         title: 'Vegan Tofu Cauliflower Curry Korma',
         description: 'A creamy, spicy korma curry with tofu and cauliflower.',
         author: 'Indian Foodie',
@@ -260,7 +260,6 @@ function App() {
       },
       'Shawarma Roasted Cabbage Wedges': {
         image: recipe.image,
-        
         title: 'Shawarma Roasted Cabbage Wedges',
         description: 'Savory roasted cabbage wedges with shawarma spices.',
         author: 'Middle Eastern Delights',
@@ -498,14 +497,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header searchQuery={searchQuery} onSearch={handleSearch} />
+        <Header onSearch={handleSearch} />
         <Routes>
-          <Route path="/" element={<Home searchQuery={searchQuery} />} />
+          <Route path="/" element={<Home searchQuery={searchQuery} onRecipeClick={handleRecipeSelect} />} />
+          <Route path="/recipe-details" element={<RecipeDetails recipe={selectedRecipe} onBack={() => setSelectedRecipe(null)} />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>
-        <Footer /> {/* Footer after the routes */}
+        <Footer /> {/* Footer added within Router */}
       </div>
     </Router>
   );
