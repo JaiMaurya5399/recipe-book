@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+
+.RecipeDetails-container {
+  max-width: 800px; 
+  margin: 20px auto; 
+  padding: 20px; 
+  text-align: left; 
+}
+
+.RecipeDetails-image {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px; 
+}
+
+.RecipeDetails-heading {
+  font-size: 1.5em; 
+  margin-bottom: 10px; 
+}
+
+.RecipeDetails-ingredients,
+.RecipeDetails-instructions {
+  margin-bottom: 20px;
+}
+
+.RecipeDetails-ingredients li,
+.RecipeDetails-instructions li {
+  margin-bottom: 10px; 
+}

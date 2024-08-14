@@ -1,11 +1,12 @@
+// RecipeCard.js
 import React from 'react';
-import './RecipeCard.css'; // Add a separate CSS file if needed for RecipeCard
+import './RecipeCard.css';
 
-function RecipeCard({ image, title }) {
+const RecipeCard = ({ image, title, onClick }) => {
   return (
-    <div className="recipe-card">
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
+    <div className="recipe-card" onClick={onClick}>
+      <img src={image} alt={title} className="recipe-image" />
+      <h3 className="recipe-title">{title}</h3>
     </div>
   );
 }
