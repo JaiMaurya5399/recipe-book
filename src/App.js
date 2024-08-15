@@ -1,11 +1,11 @@
-// App.js
+// Worked by Jai Maurya and Aneri Patel
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
-import About from './About'; // Import the About component
-import PrivacyPolicy from './PrivacyPolicy'; // Import the Privacy Policy component
-import Terms from './Terms'; // Import the Terms component
+import About from './About'; 
+import PrivacyPolicy from './PrivacyPolicy'; 
+import Terms from './Terms'; 
 import Footer from './Footer';
 import RecipeDetails from './RecipeDetails';
 
@@ -505,7 +505,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>
-        <Footer /> {/* Footer added within Router */}
+        <Footer /> {}
       </div>
     </Router>
   );

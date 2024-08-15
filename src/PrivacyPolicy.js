@@ -1,3 +1,4 @@
+// Worked by Jai Maurya 
 import React from 'react';
 import './PrivacyPolicy.css';
 

@@ -1,7 +1,7 @@
-// RecipeDetails.js
+// Worked by Aneri Patel
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './RecipeDetails.css'; // Make sure to create and link this CSS file
+import './RecipeDetails.css'; 
 
 function RecipeDetails({ recipe, onBack }) {
   const navigate = useNavigate();

@@ -1,3 +1,4 @@
+// Worked by Megha Paul
 import React from 'react';
 import './Terms.css';
 
